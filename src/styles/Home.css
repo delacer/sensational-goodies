@@ -1,0 +1,382 @@
+.home {
+  font-family: 'Segoe UI', sans-serif;
+  color: #4a4a4a;
+  scroll-behavior: smooth;
+  background-color: #fff;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 2rem;
+  color: white;
+  text-align: center;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, rgba(90, 62, 133, 0.6), rgba(0, 0, 0, 0.4));
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: auto;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #7b3fe4;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #5a3e85;
+}
+
+.cta-button.secondary {
+  background-color: #5a3e85;
+}
+
+.cta-button.secondary:hover {
+  background-color: #3c2a60;
+}
+
+.cta-button.large {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+}
+
+/* Intro Section */
+.intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background-color: #fdf9ff;
+  gap: 2rem;
+}
+
+.intro-text {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.intro-text h2 {
+  font-size: 2rem;
+  color: #5a3e85;
+  margin-bottom: 1rem;
+}
+
+.intro-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.intro-text ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.intro-text ul li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.intro-image {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.intro-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(90, 62, 133, 0.1);
+}
+
+/* Services Section */
+.services {
+  padding: 4rem 2rem;
+  background-color: #fff5f8;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2rem;
+  color: #5a3e85;
+  margin-bottom: 2rem;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  color: #5a3e85;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #fefefe;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  color: #5a3e85;
+  margin-bottom: 2rem;
+}
+
+.testimonial-list blockquote {
+  font-style: italic;
+  margin: 1.5rem auto;
+  max-width: 600px;
+  position: relative;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid #7b3fe4;
+  background-color: #f9f6ff;
+  border-radius: 8px;
+}
+
+.testimonial-list footer {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #7b3fe4;
+}
+
+/* Call to Action Banner */
+.cta-banner {
+  background-color: #ffb6c1;
+  color: #1e1e1e;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.cta-banner h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-banner p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-text, .intro-image {
+    max-width: 100%;
+  }
+
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.testimonials {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f8f4ff;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  color: #5a3e85;
+  margin-bottom: 2rem;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(90, 62, 133, 0.08);
+  position: relative;
+  text-align: left;
+}
+
+.testimonial-avatar {
+  width: 50px;
+  height: 50px;
+  background-color: #7b3fe4;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.testimonial-quote {
+  font-style: italic;
+  font-size: 1rem;
+  color: #4a4a4a;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.testimonial-quote::before {
+  content: "“";
+  font-size: 2rem;
+  color: #7b3fe4;
+  position: absolute;
+  left: -10px;
+  top: -10px;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  color: #5a3e85;
+  font-size: 0.95rem;
+}
+.testimonial-stars {
+  color: #f5b50a;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.star {
+  opacity: 0.3;
+}
+
+.star.filled {
+  opacity: 1;
+}
+
+.review-form {
+  margin-top: 3rem;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(90, 62, 133, 0.08);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.review-form h3 {
+  color: #5a3e85;
+  margin-bottom: 1rem;
+}
+
+.review-form input,
+.review-form textarea,
+.review-form select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: inherit;
+}
+
+.review-form button {
+  background-color: #7b3fe4;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.review-form button:hover {
+  background-color: #5a3e85;
+}
